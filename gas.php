@@ -20,13 +20,26 @@ $login = json_decode($login,true);
 $bearer = $login['access_token'];
 $id = $tri->trans($bearer);
 $id = json_decode($id,true);
-$id = $id['data'][0]['rewardTransactionId'];
+$a = $id['data'][0]['rewardTransactionId'];
+$b = $id['data'][1]['rewardTransactionId'];
+$c = $id['data'][2]['rewardTransactionId'];
+$d = $id['data'][3]['rewardTransactionId'];
+$e = $id['data'][4]['rewardTransactionId'];
+$f = $id['data'][5]['rewardTransactionId'];
+$g = $id['data'][6]['rewardTransactionId'];
 for($id1 = 1500; $id1 < 1600;$id1++)
 {
-  $gas = $tri->claim($bearer,$id,$id1);
-  echo $gas . "\r\n";
+  $ah = $tri->claim($bearer,$a,$id1);
+  $bh = $tri->claim($bearer,$b,$id1);
+  $ch = $tri->claim($bearer,$c,$id1);
+  $dh = $tri->claim($bearer,$d,$id1);
+  $eh = $tri->claim($bearer,$e,$id1);
+  $eh = $tri->claim($bearer,$f,$id1);
+  $eh = $tri->claim($bearer,$g,$id1);
+  echo $ah."|".$bh."|".$ch."|".$dh."|".$eh."|".$fh."|".$gh."|\r\n";
   sleep(2);
 }
+
 
 
 ?>
