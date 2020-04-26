@@ -34,8 +34,8 @@ for($id1 = 1500; $id1 < 1600;$id1++)
   $ch = $tri->claim($bearer,$c,$id1);
   $dh = $tri->claim($bearer,$d,$id1);
   $eh = $tri->claim($bearer,$e,$id1);
-  $eh = $tri->claim($bearer,$f,$id1);
-  $eh = $tri->claim($bearer,$g,$id1);
+  $fh = $tri->claim($bearer,$f,$id1);
+  $gh = $tri->claim($bearer,$g,$id1);
   echo $ah."|".$bh."|".$ch."|".$dh."|".$eh."|".$fh."|".$gh."|\r\n";
   sleep(2);
 }
